@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cous.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+    body {
+        background-color: #f2f2f2;
+        margin: 0;
+    }
+
+    div {
+        display: inline-block;
+        width: 100%;
+    }
+
+    h1 {
+        color: #323232;
+        text-decoration: none;
+        font-size: 128px;
+        font-family: 'Inter', sans-serif;
+        font-style: bold;
+        text-align: center;
+    }
+
+    h2 {
+        color: #000000;
+        text-decoration: none;
+        font-size: 64px;
+        font-family: 'Inter', sans-serif;
+        font-style: bold;
+        text-align: left;
+        display: block;
+        margin-left: 32px;
+        margin-top: 32px;
+    }
+
+    h3 {
+        color: white;
+        text-decoration: none;
+        font-size: 32px;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        text-align: left;
+        margin-left: 36px;
+        margin-top: -16px;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: center;
+        color: #000000;
+        font-family: 'Inter', sans-serif;
+        font-style: bold;
+    }
+
+    .cous {
+        font-size: 128px;
+    }
+
+    .cous .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+
+    .first {
+        display: block;
+    }
+</style>
+
+<body id="body">
+    <html>
+    <div style="height: 600px;" class="first">
+        <h1 class="cous" id="title" title="@antonio-davis, @cappee" style="margin-top: 200px;">Cous</h1>
+        <!--<p>Here you can take a view to our projects</p>-->
+    </div>
+
+    <div style="height: 100vh; background-color: #9c27b0;" id="treble-checker">
+        <h2>Treble Checker</h2>
+        <h3 title="his github link">by <a href="https://www.github.com/cappee">@cappee</a></h3>
+        <p style="text-align: left; margin-left: 36px;"><i>description</i></p>
+    </div>
+
+    </html>
+
+    <script>
+        $(function () {
+            $("#title").tooltip();
+        });
+
+        // Wrap every letter in a span
+        var textWrapper = document.querySelector('.cous');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({ loop: false })
+            .add({
+                targets: '.cous .letter',
+                scale: [4, 1],
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 950,
+                delay: (el, i) => 70 * i
+            })
+    </script>
+</body>
