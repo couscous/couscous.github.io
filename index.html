@@ -78,6 +78,14 @@
     .first {
         display: block;
     }
+
+    .category {
+        color: #6a0080;
+        border: 2px solid #6a0080;
+        border-radius: 10%;
+        margin-left: 16px;
+        padding: 4px;
+    }
 </style>
 
 <body id="body">
@@ -88,8 +96,11 @@
     </div>
 
     <div style="height: 100vh; background-color: #9c27b0;" id="treble-checker">
-        <h2>Treble Checker</h2>
-        <h3 title="his github link">by <a style="text-decoration: #6a0080;" href="https://www.github.com/cappee">@cappee</a></h3>
+        <h2 style="display: inline-block">Treble Checker</h2>
+        <p class="category" style="display: inline-block;">#Apps</p>
+        <!--!<img src="imgs/treble-checker icon.svg" style="display: inline-block; width: 72px; height: 72px; margin-left: 16px;">-->
+        <h3 title="his github link">by <a style="text-decoration: #6a0080;"
+                href="https://www.github.com/cappee">@cappee</a></h3>
         <p style="text-align: left; margin-left: 36px;"><i>description</i></p>
     </div>
 
@@ -97,7 +108,7 @@
 
     <script>
         $(function () {
-            $("#title").tooltip();
+            $().tooltip();
         });
 
         // Wrap every letter in a span
