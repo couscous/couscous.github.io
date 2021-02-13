@@ -72,17 +72,32 @@
 
     .cous:hover {
         font-size: 128px;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.07), 
-                0 2px 4px rgba(0,0,0,0.07), 
-                0 4px 8px rgba(0,0,0,0.07), 
-                0 8px 16px rgba(0,0,0,0.07),
-                0 16px 32px rgba(0,0,0,0.07), 
-                0 32px 64px rgba(0,0,0,0.07);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+            0 2px 4px rgba(0, 0, 0, 0.07),
+            0 4px 8px rgba(0, 0, 0, 0.07),
+            0 8px 16px rgba(0, 0, 0, 0.07),
+            0 16px 32px rgba(0, 0, 0, 0.07),
+            0 32px 64px rgba(0, 0, 0, 0.07);
+    }
+
+    #treble-checker {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+            0 -2px 4px rgba(0, 0, 0, 0.07),
+            0 -4px 8px rgba(0, 0, 0, 0.07),
+            0 -8px 16px rgba(0, 0, 0, 0.07),
+            0 -16px 32px rgba(0, 0, 0, 0.07),
+            0 -32px 64px rgba(0, 0, 0, 0.07);
     }
 
     .cous .letter {
         display: inline-block;
         line-height: 1em;
+    }
+
+    .description {
+        padding: 5%;
+        text-align: left;
+        font-weight: 600;
     }
 
     .first {
@@ -97,15 +112,20 @@
         <!--<p>Here you can take a view to our projects</p>-->
     </div>
 
-    <div style="height: 100vh; background-color: #9c27b0;" id="treble-checker">
+    <div style="height: fit-content; background-color: #9c27b0;" id="treble-checker">
         <h2 style="display: inline-block">Treble Checker</h2>
         <!--!<img src="imgs/treble-checker icon.svg" style="display: inline-block; width: 72px; height: 72px; margin-left: 16px;">-->
         <h3 title="his github link">by <a style="color: #6a0080; text-decoration: none;"
                 href="https://www.github.com/cappee">@cappee</a></h3>
-        <p style="text-align: left; margin-left: 36px;">
-            <i>With our app you can get a lot information mainly about Project Treble support on your Android device.<br>
-                But that's not all: there are some useful tools and a beautiful Material Design graphics with great attention to the smallest details.</i>
-        </p>
+        <div style="display: flex;">
+            <p class="description"
+                style="width: 33%; color: #fff; margin-right: 0%; font-size: 36px;">This app
+                give you a lot informations about Project Treble support <br></p>
+            <p style="width: 33%; margin-top: 10%; text-align: center; font-weight: 900; color: #222; font-size: 24px;">But that's not all</p>
+            <p class="description" style="width: 33%; color: #fff;"><br>There are some useful tools and a beautiful Material Design
+                graphics with great
+                attention to the smallest details.</p>
+        </div>
     </div>
 
     </html>
