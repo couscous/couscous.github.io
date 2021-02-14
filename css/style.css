@@ -1,0 +1,16 @@
+app-page-title { /* with h1 */
+    display: inline-block;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+app-page-div {
+    display: inline-block;
+    margin-right: 32px;
+    margin-left: 32px;
+}
+
+c-white {
+    color: white;
+}
